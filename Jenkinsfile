@@ -1,13 +1,13 @@
-pipeline {
+peline {
     agent any
     stages {
         stage('Deploy') {
             steps {
                 timeout(time: 1, unit: 'MINUTES') {
-                    sh '/var/jenkins_home/scripts/fibonacci.sh 5'
+                    sh 'for n in `seq 1 10`; do echo $n; sleep 1; done'
                 }
                 timeout(time: 1, unit: 'MINUTES') {
-                    sh '/var/jenkins_home/scripts/fibonacci.sh 35'
+                    sh 'for n in `seq 1 50`; do echo $n; sleep 1; done'
                 }
             }
         }
