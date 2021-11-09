@@ -7,7 +7,7 @@ pipeline {
                     sh '/var/jenkins_home/scripts/fibonacci.sh 5'
                 }
                 timeout(time: 1, unit: 'MINUTES') {
-                    sh '/var/jenkins_home/scripts/fibonacci.sh 32'
+                    sh '/var/jenkins_home/scripts/fibonacci.sh 35'
                 }
             }
         }
